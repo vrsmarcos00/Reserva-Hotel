@@ -1,0 +1,15 @@
+.form-control{
+    border: none;
+    color: var(--bg-gray-1);
+    background: var(--bg-gray-2);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.form-select{
+    border: none;
+    color: var(--bg-gray-1);
+    background: var(--bg-gray-2);
+    font-weight: 400;
+    font-size: 1rem;
+}

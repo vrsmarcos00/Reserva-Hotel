@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hotel Rodrigues</title>
+
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+        <!--Material Icons-->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+        <!--Font Awesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+        <!--Style CSS-->
+        <link rel="stylesheet" href="style.css">
+
+        <!--Favicon-->
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    </head>
+
+    <body>
+
+        <!--Start Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container pt-1 pb-1">
+                <a class="navbar-brand fw-bold" href="./index.html">Hotel Rodrigues</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </button>
+
+                <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <!--Botão Tela menor-->
+                        <li class="nav-item d-flex d-md-flex d-lg-none justify-content-center align-item-center">
+                            <a href="./index.html" class="nav-link text-decoration-none text-muted pe-lg-5">Home</a>
+                        </li>
+
+                        <li class="nav-item d-block d-md-block d-lg-none pt-3 pb-3">
+                            <a href="./login.html" type="button" class="btn btn-orange w-100 rounded-0">Login</a>
+                        </li>
+                        <!--End botão tela menor-->
+
+                        <!--Botão tela maior-->
+                        <li class="nav-item d-none d-md-none d-lg-flex justify-content-center align-items-center">
+                            <a href="./index.html" class="nav-link text-decoration-none text-muted pe-lg-5">Home</a>
+                        </li>
+
+                        <li class="nav-item d-none d-md-none d-lg-block">
+                            <a href="./login.html" type="button" class="btn btn-orange rounded-0 ps-lg-5 pe-lg-5">Login</a>
+                        </li>
+                        <!--End Botão tela maior-->
+                    </ul>   
+                </div>
+            </div>
+        </nav>
+        <!--End Navbar-->
+
+        <!-- Start Banner-->
+        <main class="w-100 background-banner-search d-flex align-items-center">
+            <div class="container">
+                <div class="card rounded-1 border-0 p-1 pt-4 pb-4 p-lg-4 pb-md-0 pb-lg-0 shadow">
+                    <div class="card-body">
+                        <form class="pb-lg-2" onsubmit="return false;">
+                            <div class="row">
+                                <div class="col-12 col-md-12 col-lg-3 mb-3">
+                                    <label for="localizacao" class="form-label fw-bold">Localização</label>
+                                    <input type="text" class="form-control rounded-0" name="localizacao" id="localizacao" placeholder="Digite a localização" value="Rio de Janeiro">
+                                </div>
+
+                                <div class="col-12 col-md-12 col-lg-2 mb-3">
+                                    <label for="entrada" class="form-label fw-bold">Entrada</label>
+                                    <input type="date" class="form-control rounded-0" name="entrada" id="entrada" value="2022-02-21">
+                                </div>
+
+                                <div class="col-12 col-md-12 col-lg-2 mb-3">
+                                    <label for="saida" class="form-label fw-bold">Saída</label>
+                                    <input type="date" class="form-control rounded-0" name="saida" id="saida" value="2022-03-02">
+                                </div>
+
+                                <div class="col-12 col-md-12 col-lg-3 mb-3">
+                                    <label for="periodo" class="form-label fw-bold">Período</label>
+                                    <select class="form-select rounded-0" name="periodo" id="periodo" aria-label="Selecione o período">
+                                        <option value="---">Selecione um período</option>
+                                        <option value="madrugada">Madrugada</option>
+                                        <option value="manha" selected>Manhã</option>
+                                        <option value="tarde">Tarde</option>
+                                        <option value="noite">Noite</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12 col-md-12 col-lg-2 mb-3 pt-3 d-lg-flex align-items-end">
+                                    <a href="result.html" class="btn btn-lg btn-orange w-100 rounded-0 border-0 p-lg-2">Pesquisar</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- End Banner-->
+
+        <!--Start Column 1 -->
+        <main class="w-100 min-vh-100">
+            <div class="container pt-4 pt-lg-5 pb-lg-5">
+                <div class="row">
+                    <div class="d-none d-md-none d-lg-block col-lg-3">
+                        <div class="card h=100 rounded-0">
+                            <div class="card-body">
+                                <!-- Covid -->
+                                <div class="w-100 pb-4 border-bottom">
+                                    <div class="card-title d-flex align-items-baseline">
+                                        <h4 class="fs-5 fw-bold me-2">Covid</h4>
+                                        <button type="button" class="btn btn-tooltip-default" data-bs-toggle="tooltip" data-bs-placement="rigth" title="Informação">
+                                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="covid" id="covid">
+                                        <label for="covid" class="form-check-label">
+                                            Estabelecimentos com medidas de segurança em vigor
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- End Covid -->
+
+                                <!-- Promoções-->
+                                <div class="w-100 pt-4 pb-4 border-bottom">
+                                    <div class="card-title d-flex align-items-baseline">
+                                        <h4 class="fs-5 fw-bold me-2">Promoções</h4>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="cancelamento" id="cancelamento">
+                                        <label for="cancelamento" class="form-check-label">Cancelamento grátis</label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="reserva-imediato" id="reserva-imediato">
+                                        <label for="reserva-imediato" class="form-check-label">Reserva Imediato</label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="ofertas" id="ofertas">
+                                        <label for="ofertas" class="form-check-label">Ofertas Especiais</label>
+                                    </div>
+                                </div>
+                                <!-- End Promoções-->
+
+                                <!-- Preço-->
+                                <div class="w-100 pt-4 pb-4 border-bottom">
+                                    <div class="card-title d-flex align-items-baseline">
+                                        <h4 class="fs-5 fw-bold me-2">Preços</h4>
+                                    </div>
+
+                                    <label for="rage" class="form-label">R$ 100.00 à R$ 100,000,00</label>
+                                    <input type="range" class="form-range" min="0" step="0.5" max="5" id="range">
+                                </div>
+                                <!-- End Preço-->
+
+                                <!-- Acomodações-->
+                                <div class="w-100 pt-4 pb-4 border-bottom">
+                                    <div class="card-title d-flex align-items-baseline">
+                                        <h4 class="fs-5 fw-bold me-2">Tipos de Acomodações</h4>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="hoteis" id="hoteis">
+                                        <label for="hoteis" class="form-check-label">Hotéis</label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="pousadas" id="pousadas">
+                                        <label for="pousadas" class="form-check-label">Pousadas</label>
+                                    </div>
+                                </div>
+                                <!-- End Acomodações-->
+
+                                <!-- Serviços-->
+                                <div class="w-100 pt-4 pb-4 border-bottom">
+                                    <div class="card-title d-flex align-items-baseline">
+                                        <h4 class="fs-5 fw-bold me-2">Serviços</h4>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="internet" id="internet">
+                                        <label for="internet" class="form-check-label">Internet</label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="cafe-da-manha" id="cafe-da-manha">
+                                        <label for="cafe-da-manha" class="form-check-label">Café da Manhã</label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="piscina" id="piscina">
+                                        <label for="piscina" class="form-check-label">Piscina</label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="campo-futebol" id="campo-futebol">
+                                        <label for="campo-futebol" class="form-check-label">Campo de Futebol</label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="estacionamento" id="estacionamento">
+                                        <label for="estacionamento" class="form-check-label">Estacionamento</label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="praia" id="praia">
+                                        <label for="praia" class="form-check-label">Praias</label>
+                                    </div>
+                                </div>
+                                <!-- End Serviços-->
+
+                                <!--Btn Aplicar-->
+                                <div class="w-100 pt-4 pb-4 d-flex justify-content-end">
+                                    <button type="button" class="btn btn-orange pe-4 ps-4 rounded-0 w-100 fw-bold" disabled>
+                                        Aplicar
+                                    </button>
+                                </div>
+                                <!--End Btn Aplicar-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12 col-lg-9">
+                        <div class="alert alert-info alert-dismissible fade show rounded-0" role="alert">
+                            <span>
+                                <i class="fas fa-tag me-2" aria-hidden="true"></i>
+                                Itens abaixo em promoção
+                            </span>  
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+
+                        <div class="card mb-3 rounded-0">
+                            <div class="row g-0 pe-0 me-0">
+                                <div class="col-lg-4">
+                                    <div class="position-relative h-100">
+                                        <img src="./assets/img/hoteis/hotel-1.jpeg" alt="" class="card-img-top">
+                                        <span class="position-absolute bottom-0 rigth-0 bg-color-orange ps-3 pe-3 pt-1 pb-1">R$ 669.00</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12 col-lg-8">
+                                    <div class="card-body overflow-hidden pe-0 me-0 pb-0 mb-0 ps-0 ms-0">
+                                        <h5 class="card-title mb-1 ps-3 pe-3">
+                                            Hotel Califórnia
+                                        </h5>
+                                        <p class="text-muted mb-1 ps-3 pe-3">
+                                            Porto Seguro/BA
+                                        </p>
+                                        <div class="stars ps-3 pe-3">
+                                            <span class="Star"><i class="fa fa-star" aria-hidden="true"></i></span>
+
+                                            <span class="Star"><i class="fa fa-star" aria-hidden="true"></i></span>
+
+                                            <span class="Star"><i class="fa fa-star" aria-hidden="true"></i></span>
+
+                                            <span class="Star"><i class="fa fa-star" aria-hidden="true"></i></span>
+
+                                            <span class="Star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                        </div>
+                                        <p class="text-muted pt-3 pb-2 ps-3 pe-3">
+                                            Com ótimos espaços para quem procura algo luxuoso e confortável.
+                                        </p>
+
+                                        <div class="card-footer row border-0 pe-0 me-0 ps-0 ms-0">
+                                            <div class="col-12 col-md-12 col-lg-4 d-flex align-items-center pt-1 pb-1">
+                                                <span class="material-icons me-2">local_dining</span>
+                                                Restaurante
+                                            </div>
+
+                                            <div class="col-12 col-md-12 col-lg-4 d-flex align-items-center pt-1 pb-1">
+                                                <span class="material-icons me-2">pool</span>
+                                                Piscinas
+                                            </div>
+
+                                            <div class="col-12 col-md-12 col-lg-4 d-flex align-items-center pt-1 pb-1">
+                                                <span class="material-icons me-2">wifi</span>
+                                                Wi-fi
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3 rounded-0">
+                            <div class="row g-0 pe-0 me-0">
+                                <div class="col-lg-4">
+                                    <div class="position-relative h-100">
+                                        <img src="./assets/img/hoteis/hotel-2.jpeg" alt="" class="card-img-top">
+                                        <span class="position-absolute bottom-0 rigth-0 bg-color-orange ps-3 pe-3 pt-1 pb-1">R$ 700.00</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12 col-lg-8">
+                                    <div class="card-body overflow-hidden pe-0 me-0 pb-0 mb-0 ps-0 ms-0">
+                                        <h5 class="card-title mb-1 ps-3 pe-3">
+                                            Hotel Paris Germany
+                                        </h5>
+                                        <p class="text-muted mb-1 ps-3 pe-3">
+                                            Ilhéus/BA
+                                        </p>
+                                        <div class="stars ps-3 pe-3">
+                                            <span class="Star"><i class="fa fa-star" aria-hidden="true"></i></span>
+
+                                            <span class="Star"><i class="fa fa-star" aria-hidden="true"></i></span>
+
+                                            <span class="Star"><i class="fa fa-star" aria-hidden="true"></i></span>
+
+                                            <span class="Star"><i class="fa fa-star" aria-hidden="true"></i></span>
+
+                                            <span class="Star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                        </div>
+                                        <p class="text-muted pt-3 pb-2 ps-3 pe-3">
+                                            Com ótimos espaços para quem procura algo luxuoso e confortável.
+                                        </p>
+
+                                        <div class="card-footer row border-0 pe-0 me-0 ps-0 ms-0">
+                                            <div class="col-12 col-md-12 col-lg-4 d-flex align-items-center pt-1 pb-1">
+                                                <span class="material-icons me-2">local_dining</span>
+                                                Restaurante
+                                            </div>
+
+                                            <div class="col-12 col-md-12 col-lg-4 d-flex align-items-center pt-1 pb-1">
+                                                <span class="material-icons me-2">pool</span>
+                                                Piscinas
+                                            </div>
+
+                                            <div class="col-12 col-md-12 col-lg-4 d-flex align-items-center pt-1 pb-1">
+                                                <span class="material-icons me-2">wifi</span>
+                                                Wi-fi
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3 rounded-0">
+                            <div class="row g-0 pe-0 me-0">
+                                <div class="col-lg-4">
+                                    <div class="position-relative h-100">
+                                        <img src="./assets/img/hoteis/hotel-3.jpeg" alt="" class="card-img-top">
+                                        <span class="position-absolute bottom-0 rigth-0 bg-color-roxo ps-3 pe-3 pt-1 pb-1">R$ 400.00</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12 col-lg-8">
+                                    <div class="card-body overflow-hidden pe-0 me-0 pb-0 mb-0 ps-0 ms-0">
+                                        <h5 class="card-title mb-1 ps-3 pe-3">
+                                            Pousada Atlântica
+                                        </h5>
+                                        <p class="text-muted mb-1 ps-3 pe-3">
+                                            Copacabana/RJ
+                                        </p>
+                                        <div class="stars ps-3 pe-3">
+                                            <span class="Star"><i class="fa fa-star" aria-hidden="true"></i></span>
+
+                                            <span class="Star"><i class="fa fa-star" aria-hidden="true"></i></span>
+
+                                            <span class="Star"><i class="fa fa-star" aria-hidden="true"></i></span>
+
+                                            <span class="Star"><i class="fa fa-star" aria-hidden="true"></i></span>
+
+                                            <span class="Star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                        </div>
+                                        <p class="text-muted pt-3 pb-2 ps-3 pe-3">
+                                            Com ótimos espaços para quem procura algo luxuoso e confortável.
+                                        </p>
+
+                                        <div class="card-footer row border-0 pe-0 me-0 ps-0 ms-0">
+                                            <div class="col-12 col-md-12 col-lg-4 d-flex align-items-center pt-1 pb-1">
+                                                <span class="material-icons me-2">local_cafe</span>
+                                                Café da manhã
+                                            </div>
+
+                                            <div class="col-12 col-md-12 col-lg-4 d-flex align-items-center pt-1 pb-1">
+                                                <span class="material-icons me-2">pool</span>
+                                                Praias
+                                            </div>
+
+                                            <div class="col-12 col-md-12 col-lg-4 d-flex align-items-center pt-1 pb-1">
+                                                <span class="material-icons me-2">sports_baseball</span>
+                                                Campo de Futebol
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--End -->
+
+        <!--Start Rodape-->
+        <footer class="w-100 bg-light">
+            <div class="container pt-5 pt-lg-5 pb-lg-3">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-4 mb-5 mb-md-0 mb-lg-0">
+                    <h4 class="fs-4 fw-bold text-uppercase mb-2 mb-md-4 mb-lg-4">Hotel Rodrigues</h4>
+
+                    <p class="Text-muted">
+                        Somos uma empresa que nasceu no ano de 1998, cujo a missão é entregar aos nossos clientes e parceiros os melhores lugares para ter um lazer e um descanso excelente e merecido.
+                    </p>
+
+                    <p>
+                        <a href="#" title="Facebook" class="text-decoration-none text-muted me-1 me-md-1 me-lg-2"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+
+                        <a href="#" title="Twitter" class="text-decoration-none text-muted me-1 me-md-1 me-lg-2"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+
+                        <a href="#" title="Instagram" class="text-decoration-none text-muted me-1 me-md-1 me-lg-2"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+
+                        <a href="#" title="Youtube" class="text-decoration-none text-muted me-1 me-md-1 me-lg-2"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </p>
+                </col-12>
+                    </div>
+
+                    <div class="col-12 col-md-4 col-lg-4 mb-5 mb-md-0 mb-lg-0">
+                        <h4 class="fs-4 fw-bold mb-2 mb-md-4 mb-lg-4">Minha Conta</h4>
+
+                        <p class="mb-0">
+                            <a href="#" class="text-decoration-none text-muted">Minhas Viagens</a>
+                        </p>
+
+                        <p class="mb-0">
+                            <a href="#" class="text-decoration-none text-muted">Meu Perfil</a>
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-md-4 col-lg-4 mb-5 mb-md-0 mb-lg-0">
+                        <h4 class="fs-4 fw-bold mb-2 mb-md-4 mb-lg-4">Informações Adicionais</h4>
+
+                        <p class="mb-1">
+                            <a href="#" class="text-decoration-none text-muted">Termos e condições</a>
+                        </p>
+
+                        <p class="mb-1">
+                            <a href="#" class="text-decoration-none text-muted">Política e Privacidade</a>
+                        </p>
+
+                        <p class="mb-1">
+                            <a href="#" class="text-decoration-none text-muted">Central de Ajuda</a>
+                        </p>
+
+                        <p class="mb-1">
+                            <a href="#" class="text-decoration-none text-muted">Condições de uso</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-100 bg-color-orange d-flex justify-content-center align-items-center">
+                <p class="mb-0 pt-1 pb-1">
+                    &copy; Todos os direitos reservados
+                </p>
+            </div>
+        </footer>
+        <!--End Rodape-->
+        
+    </body>
+
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+</html>
